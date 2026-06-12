@@ -1,0 +1,27 @@
+<div class="card p-4 p-md-5">
+  <h3 class="fw-bold text-white mb-3">🛠️ የምርት መረጃ ማሻሻያ</h3>
+  <form (ngSubmit)="updateProduct()" #f="ngForm">
+    <div class="mb-3">
+      <label class="form-label">የምርት ስም *</label>
+      <input type="text" [(ngModel)]="product.name" name="name" class="form-control" required />
+    </div>
+    <div class="row mb-3">
+      <div class="col-6">
+        <label class="form-label">ዋጋ *</label>
+        <input type="number" [(ngModel)]="product.price" name="price" class="form-control" required />
+      </div>
+      <div class="col-6">
+        <label class="form-label">ብዛት *</label>
+        <input type="number" [(ngModel)]="product.quantity" name="quantity" class="form-control" required />
+      </div>
+    </div>
+    <div class="mb-4">
+      <label class="form-label">መግለጫ</label>
+      <textarea [(ngModel)]="product.description" name="description" class="form-control" rows="3"></textarea>
+    </div>
+    <div class="d-flex gap-3">
+      <button type="submit" [disabled]="!f.valid" class="btn btn-warning w-100 py-2 fw-bold text-dark">🔄 አድስ</button>
+      <a routerLink="/products" class="btn btn-light w-100 py-2">ተመለስ</a>
+    </div>
+  </form>
+</div>

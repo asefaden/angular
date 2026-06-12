@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="am">
+<head>
+  <meta charset="utf-8">
+  <title>Product Management System</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- 1. የBootstrap ዋና ስታይል (ዲዛይኑን ሙሉ በሙሉ የሚያምር የሚያደርገው ይህ ነው) -->
+  <link rel="stylesheet" href="https://jsdelivr.net">
+  
+  <!-- 2. የPlus Jakarta ዘመናዊ የፎንት ስታይል -->
+  <link rel="stylesheet" href="https://googleapis.com">
+
+  <!-- 3. የጀርባ አቀማመጥ (Global Dark Luxury background) -->
+  <style>
+    :root {
+      --primary-glow: #4f46e5;
+      --secondary-glow: #06b6d4;
+      --dark-luxury: #0f172a;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      background: linear-gradient(135deg, #f4f7fe 0%, #eef2ff 100%) !important;
+      color: #334155;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .luxury-shadow {
+      box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.05), 0 20px 40px -5px rgba(15, 23, 42, 0.03) !important;
+    }
+    .form-control:focus {
+      border-color: #4f46e5 !important;
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15) !important;
+    }
+  </style>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

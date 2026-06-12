@@ -1,0 +1,67 @@
+@import url('https://googleapis.com');
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: radial-gradient(circle at top right, #1e1b4b 0%, #0f172a 100%) !important;
+  min-height: 90vh;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.7) !important;
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  padding: 40px !important;
+  width: 100%;
+  max-width: 580px;
+}
+
+.form-label {
+  color: #94a3b8 !important;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.form-control, .input-group-text {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  padding: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* ማሻሻያ ገጽ ላይ ሳጥኖቹ ሲነኩ ወርቃማ ቀለም ያበራሉ */
+.form-control:focus {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.25) !important;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%) !important;
+  border: none !important;
+  padding: 14px !important;
+  border-radius: 12px !important;
+  font-weight: 600;
+  color: #0f172a !important;
+  box-shadow: 0 10px 20px -5px rgba(245, 158, 11, 0.3) !important;
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px -5px rgba(245, 158, 11, 0.5) !important;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+  padding: 14px !important;
+  border-radius: 12px !important;
+}

@@ -1,0 +1,15 @@
+@import url('https://jsdelivr.net');
+:host {
+  display: flex; justify-content: center; align-items: center; min-height: 100vh;
+  background: radial-gradient(circle at top right, #1e1b4b 0%, #0f172a 100%) !important;
+}
+.card {
+  background: rgba(30, 41, 59, 0.7) !important; backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important; border-radius: 24px !important;
+  width: 100%; max-width: 550px;
+}
+.form-label { color: #94a3b8 !important; font-weight: 600; font-size: 13px; }
+.form-control { background-color: rgba(15, 23, 42, 0.6) !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; color: #ffffff !important; padding: 12px !important; border-radius: 12px !important; }
+.form-control:focus { border-color: #818cf8 !important; box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.25) !important; }
+.btn-primary { background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important; border: none !important; border-radius: 12px !important; }
+.btn-light { background: rgba(255,255,255,0.05) !important; color: #cbd5e1 !important; border: 1px solid rgba(255,255,255,0.1) !important; border-radius: 12px !important; }

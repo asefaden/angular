@@ -1,0 +1,50 @@
+<div class="container py-5">
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div>
+      <h2 class="fw-bold text-white mb-1">📦 የምርቶች መቆጣጠሪያ ሰሌዳ</h2>
+      <span class="badge bg-primary-subtle text-primary rounded-pill px-3">{{ filteredProducts.length }} ምርቶች ተገኝተዋል</span>
+    </div>
+    <div class="d-flex gap-3 align-items-center">
+      <input type="text" [(ngModel)]="searchTerm" (input)="filterProducts()" class="form-control search-input" placeholder="🔍 በስም ፈልግ..." />
+      <a routerLink="/add-product" class="btn btn-primary px-4 py-2 fw-semibold">+ አዲስ ምርት</a>
+    </div>
+  </div>
+
+  <div class="card border-0 shadow-lg p-3">
+    <div class="table-responsive">
+      <table class="table align-middle mb-0">
+        <thead>
+          <tr>
+            <th>የምርት ስም</th>
+            <th>የአሃድ ዋጋ</th>
+            <th>ክምችት</th>
+            <th>ሁኔታ</th>
+            <th class="text-end">ተግባራት</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="filteredProducts.length === 0">
+            <td colspan="5" class="text-center py-5 text-muted">ምንም የተመዘገበ ምርት አልተገኘም!</td>
+          </tr>
+          <tr *ngFor="let product of filteredProducts">
+            <td>
+              <div class="fw-bold text-white">{{ product.name }}</div>
+              <small class="text-muted d-block text-truncate" style="max-width: 250px;">{{ product.description || 'መግለጫ የለም' }}</small>
+            </td>
+            <td class="fw-bold text-light">{{ product.price | currency:'ETB ' }}</td>
+            <td><span class="qty-badge">{{ product.quantity }} ፍሬ</span></td>
+            <td>
+              <span *ngIf="product.quantity > 5" class="badge status-badge stable">በቂ ክምችት</span>
+              <span *ngIf="product.quantity <= 5 && product.quantity > 0" class="badge status-badge warning">ሊያልቅ የቀረ</span>
+              <span *ngIf="product.quantity == 0" class="badge status-badge danger">አልቋል</span>
+            </td>
+            <td class="text-end">
+              <a [routerLink]="['/edit-product', product.id]" class="btn btn-outline-warning btn-sm me-2">✏️ አሻሽል</a>
+              <button (click)="deleteProduct(product.id)" class="btn btn-outline-danger btn-sm">🗑️ ሰርዝ</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
